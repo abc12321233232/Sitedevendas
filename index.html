@@ -1,33 +1,165 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Compra</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Resetando margens e padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Estilos para a página de agradecimento */
+        .thanks-container {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .thanks-container h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
+
 <body>
-    <section class="container">
-        <header>
-            <h1>Bem-vindo à nossa loja!</h1>
-            <p>Preencha seus dados para completar a compra.</p>
-        </header>
 
-        <form id="formCadastro" action="obrigado.html" method="GET">
-            <div class="input-group">
-                <label for="nome">Seu Nome:</label>
-                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
-            </div>
+    <!-- Página de Cadastro -->
+    <div id="cadastro">
+        <section class="container">
+            <header>
+                <h1>Bem-vindo à nossa loja!</h1>
+                <p>Preencha seus dados para completar a compra.</p>
+            </header>
 
-            <div class="input-group">
-                <label for="email">Seu E-mail:</label>
-                <input type="email" id="email" name="email" required placeholder="Digite seu Gmail">
-            </div>
+            <form id="formCadastro">
+                <div class="input-group">
+                    <label for="nome">Seu Nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+                </div>
 
-            <button type="submit" id="btnEnviar">Confirmar Compra</button>
-        </form>
-    </section>
+                <div class="input-group">
+                    <label for="email">Seu E-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="Digite seu Gmail">
+                </div>
 
-    <script src="script.js"></script>
+                <button type="submit" id="btnEnviar">Confirmar Compra</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Página de Agradecimento -->
+    <div id="obrigado" style="display:none;">
+        <section class="thanks-container">
+            <h1>Obrigado pela sua compra!</h1>
+            <p>Em breve, você receberá um e-mail com os detalhes.</p>
+            <footer>
+                <p>&copy; 2024 Loja Online</p>
+            </footer>
+        </section>
+    </div>
+
+    <script>
+        // Função para mostrar a página de agradecimento e ocultar o formulário
+        function mostrarPaginaAgradecimento() {
+            document.getElementById("cadastro").style.display = "none";
+            document.getElementById("obrigado").style.display = "block";
+        }
+
+        // Captura o formulário e a ação de envio
+        document.getElementById('formCadastro').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o envio padrão do formulário
+
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+
+            // Valida se o e-mail é um Gmail
+            if (!email.includes('@gmail.com')) {
+                alert('Por favor, insira um e-mail válido do Gmail.');
+                return;
+            }
+
+            // Armazena os dados no localStorage (se quiser persistir para uso futuro)
+            localStorage.setItem('nome', nome);
+            localStorage.setItem('email', email);
+
+            // Exibe a página de agradecimento
+            mostrarPaginaAgradecimento();
+        });
+    </script>
+
 </body>
+
 </html>
