@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria Online</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produto.html">Produto</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="produtos">
+            <h2>Livros em Destaque</h2>
+            <div class="produto">
+                <img src="livro.jpg" alt="Livro 1">
+                <h3>O Mistério da Lua</h3>
+                <p>Autor: João Silva</p>
+                <p>R$ 39,90</p>
+                <button class="adicionar" onclick="adicionarCarrinho('O Mistério da Lua', 39.90)">Adicionar ao Carrinho</button>
+            </div>
+            <!-- Adicione mais livros aqui -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Livraria Online</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
