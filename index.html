@@ -1,39 +1,32 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livraria Online</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Cadastro de Compra</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="produto.html">Produto</a></li>
-                <li><a href="carrinho.html">Carrinho</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section class="produtos">
-            <h2>Livros em Destaque</h2>
-            <div class="produto">
-                <img src="livro.jpg" alt="Livro 1">
-                <h3>O Mistério da Lua</h3>
-                <p>Autor: João Silva</p>
-                <p>R$ 39,90</p>
-                <button class="adicionar" onclick="adicionarCarrinho('O Mistério da Lua', 39.90)">Adicionar ao Carrinho</button>
-            </div>
-            <!-- Adicione mais livros aqui -->
-        </section>
-    </main>
+    <section class="container">
+        <header>
+            <h1>Bem-vindo à nossa loja!</h1>
+            <p>Preencha seus dados para completar a compra.</p>
+        </header>
 
-    <footer>
-        <p>&copy; 2024 Livraria Online</p>
-    </footer>
+        <form id="formCadastro" action="obrigado.html" method="GET">
+            <div class="input-group">
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+            </div>
+
+            <div class="input-group">
+                <label for="email">Seu E-mail:</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu Gmail">
+            </div>
+
+            <button type="submit" id="btnEnviar">Confirmar Compra</button>
+        </form>
+    </section>
 
     <script src="script.js"></script>
 </body>
