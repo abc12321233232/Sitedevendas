@@ -1,135 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-/* Resetando margens e padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-.container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    color: #333;
-}
-
-header p {
-    text-align: center;
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-}
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 8px;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-.thanks-container {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.thanks-container h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #28a745;
-}
-
-.thanks-container p {
-    font-size: 1.2rem;
-}
-
-.btn-voltar {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-}
-
-.btn-voltar:hover {
-    background-color: #0056b3;
-}
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Compra</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <style>
+        /* Resetando margens e padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<body>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-    <div class="container">
-        <header>
-            <h1>Bem-vindo à nossa loja!</h1>
-            <p>Preencha seus dados para completar a compra.</p>
-        </header>
+        .container {
+            max-width: 600px;
+            padding: 4
 
-        <form id="formCadastro">
-            <div class="input-group">
-                <label for="nome">Seu Nome:</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-            </div>
-
-            <div class="input-group">
-                <label for="email">Seu E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
-            </div>
-
-            <button type="submit">Confirmar Compra</button>
-        </form>
-
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
-    <script src="script.js"></script>
-</body>
-
-</html>
