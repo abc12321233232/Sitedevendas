@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Compra</title>
-    <style>
-        /* Resetando margens e padding */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bem-vindo à nossa landing page!</h1>
+            <p>Cadastre-se para receber novidades e ofertas exclusivas!</p>
+        </header>
+        
+        <form action="thank-you.html" method="get">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
 
-        .container {
-            max-width: 600px;
-            padding: 4
-
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
