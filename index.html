@@ -4,25 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Fitness e Bem-Estar | Transforme sua Vida</title>
+    <style>
+        /* Resetando estilos padrões */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos gerais */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Container principal */
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Cabeçalho */
+        header {
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        /* Seção de conteúdo */
+        .content {
+            margin-bottom: 30px;
+        }
+
+        .content h2 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .content p {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Formulário */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        form input, form button {
+            padding: 12px;
+            font-size: 1.1em;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        form input {
+            background-color: #f9f9f9;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        /* Rodapé */
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+
     <div class="container">
         <header>
-            <h1>Bem-vindo à nossa landing page!</h1>
-            <p>Cadastre-se para receber novidades e ofertas exclusivas!</p>
+            <h1>Transforme sua Vida com Fitness e Bem-Estar</h1>
+            <p>Saiba tudo sobre como melhorar sua saúde, aumentar sua energia e alcançar seus objetivos físicos!</p>
         </header>
-        
+
+        <div class="content">
+            <h2>Você está pronto para a mudança?</h2>
+            <p>Com um estilo de vida mais saudável e ativo, você pode alcançar seus objetivos, melhorar seu condicionamento físico e sentir-se melhor todos os dias. Aqui, você vai aprender sobre os melhores exercícios, alimentação equilibrada e dicas de bem-estar para transformar seu corpo e mente.</p>
+            <p>Cadastre-se para receber nosso guia completo de exercícios e dicas de alimentação saudável. Vamos juntos em busca de uma vida mais plena e cheia de energia!</p>
+        </div>
+
         <form action="thank-you.html" method="get">
             <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
 
             <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
 
-            <button type="submit">Cadastrar</button>
+            <button type="submit">Quero o Guia</button>
         </form>
+
+        <footer>
+            <p>© 2024 Fitness e Bem-Estar | <a href="#">Privacidade</a> | <a href="#">Termos de Uso</a></p>
+        </footer>
     </div>
+
 </body>
 </html>
